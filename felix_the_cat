@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+	<meta name="author" content="Anderson Silva - anderson-silva@outlook.com">
+	<title>Felix the Cat</title>
+	<link href='http://fonts.googleapis.com/css?family=Denk+One' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+	body{
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-family: 'Denk One', sans-serif;
+	}
+	.text_felix{
+		font-size: 28px;
+		color: #000;
+		margin-top: 20px;
+		text-shadow: 1px 1px 2px #222;
+		text-align: center;
+		position: relative;
+	}
+	.credits{
+		font-size: 16px;
+	}
+	.body{
+		margin: 50px auto 0;
+		width: 225px;
+		height: 300px;
+		padding-top:37px;
+	}
+	.face{
+		width: 193px;
+		height: 190px;
+		margin-left:15px;
+		border-radius: 50%;
+		position: absolute;
+		z-index: 2;
+		background:#000 ;	
+	}
+	.eyes{
+		position: relative;
+		z-index: 4;
+	}
+	.eye{
+		width: 75px;
+		height: 100px;
+		border-radius: 50%;
+		background:#fff;	
+		float: left;
+		margin: 9px 0 0 32px;
+		-webkit-transform:rotate(15deg);
+		-moz-transform:rotate(15deg);
+		-o-transform:rotate(15deg);
+		-ms-transform:rotate(15deg);
+		transform:rotate(15deg);
+	}
+	.eye:last-child{
+		float: right;
+		margin: 21px 11px 0 0;
+		-webkit-transform:rotate(10deg);
+		-moz-transform:rotate(10deg);
+		-o-transform:rotate(10deg);
+		-ms-transform:rotate(10deg);
+		transform:rotate(10deg);
+	}
+	.iris{
+		position: relative;
+		z-index: 9;
+		width: 24px;
+		height: 36px;
+		background: #000;
+		border-radius: 50%;
+		margin: 50px auto 0;
+	}
+	.mouth{
+		width:180px;
+		height: 180px;
+		border-radius: 50%;
+		background:#fff;
+		margin: 6px 0 0 6px;
+		position: absolute;
+		z-index: 3;
+		-webkit-transform:rotate(18deg);
+		-moz-transform:rotate(18deg);
+		-o-transform:rotate(18deg);
+		-ms-transform:rotate(18deg);
+		transform:rotate(18deg);
+	}
+	.mouth:before, .mouth:after{
+		content: "";
+		display: block;
+		width: 100px;
+		height: 114px;
+		background: #000;
+	}
+	.mouth:before{
+		float: left;
+		border-top-left-radius: 50%;
+		border-top-right-radius: 0%;
+		border-bottom-left-radius: 50%;
+		border-bottom-right-radius: 50%;
+		margin: 2px 0 0 0;
+	}
+	.mouth:after{
+		float: right;
+		border-top-left-radius: 0%;
+		border-top-right-radius: 50%;
+		border-bottom-left-radius: 60%;
+		border-bottom-right-radius: 50%;
+		margin: -126px 8px 0 0;
+		-webkit-transform:rotate(-13deg);
+		-moz-transform:rotate(-13deg);
+		-o-transform:rotate(-13deg);
+		-ms-transform:rotate(-13deg);
+		transform:rotate(-13deg);
+	}
+	.nose{
+		width: 40px;
+		height: 30px;
+		background: #000;
+		border-radius: 50%;
+		margin: 105px 0 0 80px;
+		position: absolute;
+		-webkit-transform:rotate(-5deg);
+		-moz-transform:rotate(-5deg);
+		-o-transform:rotate(-5deg);
+		-ms-transform:rotate(-5deg);
+		transform:rotate(-5deg);
+	}
+	.lips {
+		position: absolute;
+		z-index:4;
+		height: 140px;
+		width: 170px;
+		margin:9px 0 0 5px;
+		border-bottom:28px solid #000;
+		border-radius: 100%;
+	}
+	.lips > div {
+		position: absolute;
+		z-index: 5;
+		top: 148px;
+		left: 50px;
+		margin: 0 auto;
+		width: 70px; 
+		height: 20px;
+		background: red;
+		border-radius: 100%;
+	}
+	.ears{
+		width: auto;
+		height: auto;
+		position: relative;
+		margin: -22px 0 0 0;
+		z-index: 1;
+	}
+	.ear{
+		width: 0;
+		height: 0;
+		border-bottom: 90px solid #000;
+		border-left: 55px solid transparent;
+		border-right: 55px solid transparent;
+		margin: -14px 0 0 20px;
+		float: left;
+		-webkit-transform:rotate(-5deg);
+		-moz-transform:rotate(-5deg);
+		-o-transform:rotate(-5deg);
+		-ms-transform:rotate(-5deg);
+		transform:rotate(-5deg);
+	}
+	.ear:last-child{
+		float: right;
+		margin: -75px -11px 0 0;
+		-webkit-transform:rotate(33deg);
+		-moz-transform:rotate(33deg);
+		-o-transform:rotate(33deg);
+		-ms-transform:rotate(33deg);
+		transform:rotate(33deg);
+	}
+	.barbs{
+		width: auto;
+		height: auto;
+		position: relative;
+		z-index: 1;
+	}
+	.barb{
+		width: 0;
+		height: 0;
+		margin: -10px 0 0 -25px;
+		float: left;
+		border-right: 30px solid #000;
+		border-bottom: 35px solid transparent;
+		border-top: 35px solid transparent;
+		-webkit-transform:rotate(4deg);
+		-moz-transform:rotate(4deg);
+		-o-transform:rotate(4deg);
+		-ms-transform:rotate(4deg);
+		transform:rotate(4deg);
+	}
+	.barb:last-child{
+		float: right;
+		margin: -3px 0 0 140px;
+		border-bottom: 52px solid transparent;
+		-webkit-transform:rotate(188deg);
+		-moz-transform:rotate(188deg);
+		-o-transform:rotate(188deg);
+		-ms-transform:rotate(188deg);
+		transform:rotate(188deg);
+	}
+	.barbs:after, .barbs:before{
+		content: "";
+		display: block;
+		width: 0;
+		height: 0;
+		float: left;
+		position: relative;
+		margin: 39px 0 0 -2px;
+		border-right: 27px solid #000;
+		border-bottom: 5px solid transparent;
+		border-top: 5px solid transparent;
+		-webkit-transform:rotate(43deg);
+		-moz-transform:rotate(43deg);
+		-o-transform:rotate(43deg);
+		-ms-transform:rotate(43deg);
+		transform:rotate(43deg);
+	}
+	.barbs:after{
+		float: right;
+		margin: -26px 0 0 140px;
+		border-right: 40px solid #000;
+		border-bottom: 10px solid transparent;
+		-webkit-transform:rotate(155deg);
+		-moz-transform:rotate(155deg);
+		-o-transform:rotate(155deg);
+		-ms-transform:rotate(155deg);
+		transform:rotate(155deg);
+	}
+	</style>
+</head>
+<body>
+	<div class="text_felix">Felix the Cat<br><span class="credits" title="Anderson Silva - anderson-silva@outlook.com">by Anderson Silva</span></div>
+	<div class="body">
+		<div class="face">
+			<div class="eyes">
+				<div class="eye">
+					<div class="iris"></div>
+				</div>
+				<div class="eye">
+					<div class="iris"></div>
+				</div>
+			</div>
+			<div class="mouth">
+				<div class="nose"></div>
+				<div class="lips"><div></div></div>
+			</div>
+		</div>
+		<div class="ears">
+			<div class="ear"></div>
+			<div class="ear"></div>
+		</div>
+		<div class="barbs">
+			<div class="barb"></div>
+			<div class="barb"></div>
+		</div>	
+	</div>
+</body>
+</html>

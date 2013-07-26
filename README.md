@@ -1,4 +1,4 @@
 Felix-the-Cat
 =============
 
-The face of "felix the cat" in css3
+O gato felix, feito com html e css, veja em apsilva.com.br/lab/Felix-the-Cat
